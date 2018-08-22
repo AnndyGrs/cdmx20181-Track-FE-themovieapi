@@ -8,6 +8,10 @@ body {
 
 .card {
   width: 18rem;
-  margin-left: 16.666666;
-  margin-bottom: 16.666666;
+  margin-left: 4.166665%;
+  margin-bottom: 16.666666%;
+}
+
+main {
+  padding-left: 16.666666%;
 }
