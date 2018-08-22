@@ -13,5 +13,11 @@ body {
 }
 
 main {
-  padding-left: 16.666666%;
+  padding-left: 6%;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    padding-left: 16.666666%;
+  }
 }
