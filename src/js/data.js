@@ -2,7 +2,6 @@ window.getData = (queryS) => {
     let apikey = 'http://www.omdbapi.com/?s=';
     let finalURL = '&apikey=9cbd3088&s&type=series';
     let url = apikey + queryS + finalURL;
-    console.log(url);
     fetch(url)
         .then(series => series.json())
         .then(res => {
@@ -18,9 +17,13 @@ window.getSeries = (series) => {
     let searchSeries = series.Search;
     let i;
     for (i = 0; i < searchSeries.length; i++) {
+        let image = searchSeries[i].Poster;
+        if (image == 'N/A') {
+            image = '../images/perrito.jpg'
+        }
         drawContent.innerHTML += `
         <div class="card">
-            <img class="card-img-top" src=${searchSeries[i].Poster} alt="Card image cap">
+            <img class="card-img-top" src=${image} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${searchSeries[i].Title}</h5>
                 <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#${searchSeries[i].imdbID}">Informacion</a>
