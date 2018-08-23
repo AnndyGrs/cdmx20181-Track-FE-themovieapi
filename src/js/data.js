@@ -1,5 +1,5 @@
 window.getData = (queryS) => {
-    let apikey = 'http://www.omdbapi.com/?s=';
+    let apikey = 'https://www.omdbapi.com/?s=';
     let finalURL = '&apikey=9cbd3088&s&type=series';
     let url = apikey + queryS + finalURL;
     fetch(url)
