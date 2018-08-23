@@ -15,18 +15,21 @@ window.getData = (queryS) => {
 window.getSeries = (series) => {
     let drawContent = document.getElementById('content');
     let searchSeries = series.Search;
-    let i;
-    for (i = 0; i < searchSeries.length; i++) {
-        let image = searchSeries[i].Poster;
-        if (image == 'N/A') {
-            image = '../images/perrito.jpg'
-        }
-        drawContent.innerHTML += `
+    if (searchSeries == null) {
+        drawContent.innerHTML = 'No hay series disponibles!';
+    } else {
+        let i;
+        for (i = 0; i < searchSeries.length; i++) {
+            let image = searchSeries[i].Poster;
+            if (image == 'N/A') {
+                image = '../images/perrito.jpg'
+            }
+            drawContent.innerHTML += `
         <div class="card">
             <img class="card-img-top" src=${image} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${searchSeries[i].Title}</h5>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#${searchSeries[i].imdbID}">Informacion</a>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#${searchSeries[i].imdbID}">Informacion</a>
             </div>
         </div>
         <!-- Modal -->
@@ -50,5 +53,15 @@ window.getSeries = (series) => {
             </div>
         </div>
         `;
+        }
     }
-}
+};
+
+window.logOut = () => {
+    firebase.auth().signOut().then(function () {
+        console.log('Saliendo...');
+        location.replace('../index.html');
+    }).catch(function (error) {
+        console.log(error);
+    });
+};

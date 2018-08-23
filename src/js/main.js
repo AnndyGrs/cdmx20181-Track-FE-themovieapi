@@ -4,3 +4,7 @@ document.getElementById('searchButton').addEventListener('click', event => {
     getData(queryS);
     document.getElementById('search').value = '';
 })
+
+document.getElementById('signOut').addEventListener('click', event => {
+    window.logOut();
+})
