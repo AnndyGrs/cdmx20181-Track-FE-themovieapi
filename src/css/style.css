@@ -8,9 +8,9 @@ body {
 }
 
 h2 {
-  padding-left: 20%;
-  padding-top: 40%;
-  font-size: 60px;
+  padding-left: 10%;
+  padding-top: 60%;
+  font-size: 75px;
 }
 
 .navbar {
@@ -31,23 +31,7 @@ main {
   padding-left: 6%;
 }
 
-.preload {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.logo {
-  width: 1px;
-  margin: auto;
-  padding-right: 70%;
-  padding-top: 73%;
-}
-
-/* @keyframes pulse_animation {
+@keyframes pulse_animation {
   0% { transform: scale(1); }
   30% { transform: scale(1); }
   40% { transform: scale(1.08); }
@@ -64,10 +48,20 @@ main {
   transform-origin:70% 70%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-} */
+}
 
-@media only screen and (min-width: 1024px) {
-  main {
-    padding-left: 16.666666%;
+@media only screen and (min-width: 1024) {
+  main{
+    margin-left: 15%;
+  }
+
+  h2 {
+    padding-left: 30%;
+    padding-top: 25%;
+    font-size: 150px;
+  }
+
+  .lg {
+    margin-left: 15%;
   }
 }

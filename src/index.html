@@ -30,19 +30,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="#" data-toggle="modal" data-target="#exampleModalCenter">Registrate</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Registrate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter2">Iniciar Sesion</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="email" placeholder="correo" aria-label="correo" id="userMail">
-                    <input class="form-control mr-sm-2" type="password" placeholder="contraseña" aria-label="contraseña" id="userPass">
-                    <button class="btn btn-info my-2 my-sm-0" type="button" id="signIn">Iniciar sesion</button>
-                </form>
             </div>
         </nav>
     </header>
     <div class="container">
-        <!-- Modal -->
+        <!-- Modal Registro-->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -69,13 +67,35 @@
                 </div>
             </div>
         </div>
-        <!-- <section class="preload">
-            <div class="logo">
-                <img class="pulse" src="images/icon.png" width="250">
+        <!-- Modal Iniciar Sesion -->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Iniciar sesion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control mr-sm-2" type="email" placeholder="correo" aria-label="correo" id="userMail">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control mr-sm-2" type="password" placeholder="contraseña" aria-label="contraseña" id="userPass">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button class="btn btn-info my-2 my-sm-0" type="button" id="signIn">Iniciar sesion</button>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </div>
         <section class="row">
-            <article class="navbar-brand">
+            <article class="navbar-brand pulse">
                 <h2>YourSeries</h2>
             </article>
         </section>
