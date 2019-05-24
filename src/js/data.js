@@ -43,7 +43,7 @@ window.getSeries = (series) => {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Anio: ${searchSeries[i].Year}</p>
+                        <p>Año: ${searchSeries[i].Year}</p>
                         <p>ID IMDb: ${searchSeries[i].imdbID}</p>
                     </div>
                     <div class="modal-footer">
